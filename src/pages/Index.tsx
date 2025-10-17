@@ -31,7 +31,7 @@ const Index = () => {
 
         {/* Container dos botões */}
         <main className="container mx-auto px-4 pb-16">
-          <div className="max-w-4xl mx-auto space-y-6 md:space-y-8 buttons-container-shadow p-8 rounded-3xl">
+          <div className="max-w-4xl mx-auto space-y-6 md:space-y-8 buttons-container-shadow px-[5px] py-8 rounded-3xl">
             <LinkButton 
               image={botao01}
               alt="Entre em contato"
