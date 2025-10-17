@@ -25,7 +25,7 @@ const Index = () => {
           <img 
             src={logo} 
             alt="Logo"
-            className="w-42 h-42 md:w-56 md:h-56 lg:w-68 lg:h-68 object-contain animate-fade-in"
+            className="w-21 h-21 md:w-56 md:h-56 lg:w-68 lg:h-68 object-contain animate-fade-in"
           />
         </header>
 
