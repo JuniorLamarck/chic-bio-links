@@ -14,7 +14,7 @@ const LinkButton = ({ image, alt, to, delay = 0 }: LinkButtonProps) => {
       className="block w-full animate-fade-in hover-zoom max-w-[480px] mx-auto"
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="rounded-3xl overflow-hidden">
+      <div className="rounded-3xl overflow-hidden button-bg-shadow">
         <img 
           src={image} 
           alt={alt}
