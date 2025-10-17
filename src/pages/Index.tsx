@@ -14,7 +14,7 @@ const Index = () => {
         <img 
           src={fundo} 
           alt="Background decorativo"
-          className="absolute right-0 top-0 h-full w-auto object-cover object-left opacity-40"
+          className="absolute right-0 top-0 h-full w-auto object-cover object-right opacity-40"
         />
       </div>
 
@@ -25,13 +25,13 @@ const Index = () => {
           <img 
             src={logo} 
             alt="Logo"
-            className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 object-contain animate-fade-in"
+            className="w-32 h-32 md:w-42 md:h-42 lg:w-52 lg:h-52 object-contain animate-fade-in"
           />
         </header>
 
         {/* Container dos botões */}
         <main className="container mx-auto px-4 pb-16">
-          <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
+          <div className="max-w-4xl mx-auto space-y-6 md:space-y-8 buttons-container-shadow p-8 rounded-3xl">
             <LinkButton 
               image={botao01}
               alt="Entre em contato"

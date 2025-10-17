@@ -11,10 +11,10 @@ const LinkButton = ({ image, alt, to, delay = 0 }: LinkButtonProps) => {
   return (
     <Link 
       to={to}
-      className="block w-full animate-fade-in hover-zoom"
+      className="block w-full animate-fade-in hover-zoom max-w-[480px] mx-auto"
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="button-shadow rounded-3xl overflow-hidden">
+      <div className="rounded-3xl overflow-hidden">
         <img 
           src={image} 
           alt={alt}
