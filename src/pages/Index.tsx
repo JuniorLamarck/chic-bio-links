@@ -21,17 +21,17 @@ const Index = () => {
       {/* Conteúdo principal */}
       <div className="relative z-10">
         {/* Header com logo */}
-        <header className="pt-8 pb-12 px-4 flex justify-center">
+        <header className="pt-8 pb-6 px-4 flex justify-center">
           <img 
             src={logo} 
             alt="Logo"
-            className="w-32 h-32 md:w-42 md:h-42 lg:w-52 lg:h-52 object-contain animate-fade-in"
+            className="w-42 h-42 md:w-56 md:h-56 lg:w-68 lg:h-68 object-contain animate-fade-in"
           />
         </header>
 
         {/* Container dos botões */}
         <main className="container mx-auto px-4 pb-16">
-          <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
+          <div className="max-w-4xl mx-auto space-y-4 md:space-y-6">
             <LinkButton 
               image={botao01}
               alt="Entre em contato"
