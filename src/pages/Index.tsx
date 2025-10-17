@@ -10,11 +10,11 @@ const Index = () => {
   return (
     <div className="min-h-screen noise-bg relative">
       {/* Background decorativo */}
-      <div className="fixed top-0 right-0 w-full h-full pointer-events-none z-0">
+      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
         <img 
           src={fundo} 
           alt="Background decorativo"
-          className="absolute right-0 top-0 h-full w-auto object-cover object-right opacity-40"
+          className="absolute left-0 top-0 h-full w-auto object-cover object-left opacity-40"
         />
       </div>
 

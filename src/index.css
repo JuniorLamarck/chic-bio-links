@@ -72,7 +72,7 @@ All colors MUST be HSL.
   }
   
   .buttons-container-shadow {
-    box-shadow: 0 0 60px hsl(0 100% 50% / 0.15);
+    box-shadow: 0 8px 40px hsl(0 100% 50% / 0.2);
   }
   
   .hover-zoom {
