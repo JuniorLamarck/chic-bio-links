@@ -15,7 +15,7 @@ const AccordionButton = ({ image, alt, value, content, delay = 0 }: AccordionBut
       style={{ animationDelay: `${delay}ms` }}
     >
       <AccordionItem value={value} className="border-0">
-        <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div>img]:opacity-100">
+        <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div>img]:opacity-100 relative z-10">
           <div className="w-full rounded-2xl overflow-hidden button-bg-shadow hover-zoom">
             <img 
               src={image} 
@@ -24,8 +24,8 @@ const AccordionButton = ({ image, alt, value, content, delay = 0 }: AccordionBut
             />
           </div>
         </AccordionTrigger>
-        <AccordionContent className="pt-0 pb-0">
-          <div className="glass-effect rounded-2xl p-6">
+        <AccordionContent className="pt-0 pb-0 relative z-0">
+          <div className="glass-effect rounded-b-2xl p-6">
             <p className="text-foreground text-sm md:text-base leading-relaxed">
               {content}
             </p>

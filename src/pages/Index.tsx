@@ -27,7 +27,7 @@ const Index = () => {
           <img 
             src={logo} 
             alt="Logo"
-            className="w-11 h-11 md:w-56 md:h-56 lg:w-68 lg:h-68 object-contain animate-fade-in"
+            className="w-32 h-32 md:w-[270px] md:h-[270px] lg:w-[326px] lg:h-[326px] object-contain animate-fade-in"
           />
         </div>
 
