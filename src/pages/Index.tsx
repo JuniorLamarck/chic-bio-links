@@ -1,4 +1,6 @@
 import LinkButton from "@/components/LinkButton";
+import AccordionButton from "@/components/AccordionButton";
+import { Accordion } from "@/components/ui/accordion";
 import botao01 from "@/assets/botao01.png";
 import botao02 from "@/assets/botao02.png";
 import botao03 from "@/assets/botao03.png";
@@ -25,7 +27,7 @@ const Index = () => {
           <img 
             src={logo} 
             alt="Logo"
-            className="w-21 h-21 md:w-56 md:h-56 lg:w-68 lg:h-68 object-contain animate-fade-in"
+            className="w-11 h-11 md:w-56 md:h-56 lg:w-68 lg:h-68 object-contain animate-fade-in"
           />
         </header>
 
@@ -39,26 +41,31 @@ const Index = () => {
               delay={100}
             />
             
-            <LinkButton 
-              image={botao02}
-              alt="Plano de saúde e suas negativas"
-              to="/plano-saude"
-              delay={200}
-            />
-            
-            <LinkButton 
-              image={botao03}
-              alt="Autismo e seus direitos"
-              to="/autismo"
-              delay={300}
-            />
-            
-            <LinkButton 
-              image={botao04}
-              alt="Quem sou eu"
-              to="/sobre"
-              delay={400}
-            />
+            <Accordion type="single" collapsible className="space-y-4 md:space-y-6">
+              <AccordionButton 
+                image={botao02}
+                alt="Plano de saúde e suas negativas"
+                value="plano-saude"
+                content="Informações sobre planos de saúde e como lidar com negativas de procedimentos e tratamentos. Entenda seus direitos e como proceder em casos de recusa."
+                delay={200}
+              />
+              
+              <AccordionButton 
+                image={botao03}
+                alt="Autismo e seus direitos"
+                value="autismo"
+                content="Conheça os direitos das pessoas com autismo e suas famílias. Informações sobre tratamentos, educação inclusiva e benefícios garantidos por lei."
+                delay={300}
+              />
+              
+              <AccordionButton 
+                image={botao04}
+                alt="Quem sou eu"
+                value="sobre"
+                content="Saiba mais sobre minha trajetória profissional, experiência na área jurídica e como posso ajudar você e sua família."
+                delay={400}
+              />
+            </Accordion>
           </div>
         </main>
       </div>
