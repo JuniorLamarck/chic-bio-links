@@ -75,6 +75,12 @@ All colors MUST be HSL.
     box-shadow: 0 0 30px hsl(0 100% 50% / 0.12);
   }
   
+  @media (max-width: 768px) {
+    .button-bg-shadow {
+      box-shadow: 0 0 20px hsl(0 100% 50% / 0.08);
+    }
+  }
+  
   .glass-effect {
     position: relative;
     background: rgba(255, 255, 255, 0.1);

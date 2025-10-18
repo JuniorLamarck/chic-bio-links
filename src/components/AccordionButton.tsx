@@ -4,7 +4,7 @@ interface AccordionButtonProps {
   image: string;
   alt: string;
   value: string;
-  content: string;
+  content: React.ReactNode;
   delay?: number;
 }
 
@@ -15,8 +15,8 @@ const AccordionButton = ({ image, alt, value, content, delay = 0 }: AccordionBut
       style={{ animationDelay: `${delay}ms` }}
     >
       <AccordionItem value={value} className="border-0">
-        <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div>img]:opacity-100 relative z-10">
-          <div className="w-full rounded-2xl overflow-hidden button-bg-shadow hover-zoom">
+        <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div>img]:opacity-100 [&[data-state=open]>div]:scale-105 relative z-10">
+          <div className="w-full rounded-2xl overflow-hidden button-bg-shadow hover-zoom transition-transform duration-200">
             <img 
               src={image} 
               alt={alt}
@@ -26,9 +26,9 @@ const AccordionButton = ({ image, alt, value, content, delay = 0 }: AccordionBut
         </AccordionTrigger>
         <AccordionContent className="pt-0 pb-0 relative z-0">
           <div className="glass-effect rounded-b-2xl p-6">
-            <p className="text-foreground text-sm md:text-base leading-relaxed">
+            <div className="text-foreground text-sm md:text-base leading-relaxed">
               {content}
-            </p>
+            </div>
           </div>
         </AccordionContent>
       </AccordionItem>
