@@ -22,14 +22,14 @@ const Index = () => {
 
       {/* Conteúdo principal */}
       <div className="relative z-10">
-        {/* Header com logo */}
-        <header className="pt-8 pb-6 px-4 flex justify-center">
+        {/* Logo */}
+        <div className="pt-8 pb-6 px-4 flex justify-center">
           <img 
             src={logo} 
             alt="Logo"
             className="w-11 h-11 md:w-56 md:h-56 lg:w-68 lg:h-68 object-contain animate-fade-in"
           />
-        </header>
+        </div>
 
         {/* Container dos botões */}
         <main className="container mx-auto px-4 pb-16">
@@ -37,7 +37,7 @@ const Index = () => {
             <LinkButton 
               image={botao01}
               alt="Entre em contato"
-              to="/contato"
+              to="https://wa.me/message/A46TTJMTGMA3B1"
               delay={100}
             />
             

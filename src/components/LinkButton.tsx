@@ -9,8 +9,10 @@ interface LinkButtonProps {
 
 const LinkButton = ({ image, alt, to, delay = 0 }: LinkButtonProps) => {
   return (
-    <Link 
-      to={to}
+    <a 
+      href={to}
+      target="_blank"
+      rel="noopener noreferrer"
       className="block w-full animate-fade-in hover-zoom max-w-[323px] md:max-w-[480px] mx-auto"
       style={{ animationDelay: `${delay}ms` }}
     >
@@ -21,7 +23,7 @@ const LinkButton = ({ image, alt, to, delay = 0 }: LinkButtonProps) => {
           className="w-full h-auto object-cover"
         />
       </div>
-    </Link>
+    </a>
   );
 };
 

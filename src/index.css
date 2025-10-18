@@ -41,11 +41,6 @@ All colors MUST be HSL.
     --shadow-red: 0 100% 50%;
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
-  @font-face {
-    font-family: 'Bookman Old Style';
-    src: local('Bookman Old Style'), local('BookmanOldStyle');
-  }
 }
 
 @layer base {

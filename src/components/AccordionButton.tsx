@@ -24,9 +24,9 @@ const AccordionButton = ({ image, alt, value, content, delay = 0 }: AccordionBut
             />
           </div>
         </AccordionTrigger>
-        <AccordionContent className="pt-4 pb-0">
+        <AccordionContent className="pt-0 pb-0">
           <div className="glass-effect rounded-2xl p-6">
-            <p className="text-foreground font-bookman text-sm md:text-base leading-relaxed">
+            <p className="text-foreground text-sm md:text-base leading-relaxed">
               {content}
             </p>
           </div>
