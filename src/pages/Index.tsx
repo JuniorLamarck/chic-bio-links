@@ -15,14 +15,14 @@ const Index = () => {
     <div className="min-h-screen noise-bg relative">
       {/* Background animado */}
       <EtherealShadow
-        color="rgba(40, 40, 40, 0.8)"
-        animation={{ scale: 80, speed: 15 }}
-        noise={{ opacity: 0.6, scale: 1.2 }}
+        color="rgba(40, 40, 40, 0.9)"
+        animation={{ scale: 95, speed: 8 }}
+        noise={{ opacity: 0.7, scale: 1 }}
         sizing="fill"
       />
       
       {/* Overlay escuro para contraste */}
-      <div className="fixed inset-0 bg-black/40 pointer-events-none z-[1]" />
+      <div className="fixed inset-0 bg-black/30 pointer-events-none z-[1]" />
 
       {/* Conteúdo principal */}
       <div className="relative z-10">
