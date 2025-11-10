@@ -2,25 +2,24 @@ import LinkButton from "@/components/LinkButton";
 import AccordionButton from "@/components/AccordionButton";
 import ReviewsButton from "@/components/ReviewsButton";
 import { Accordion } from "@/components/ui/accordion";
+import { EtherealShadow } from "@/components/ui/ethereal-shadow";
 import botao01 from "@/assets/botao01.png";
 import botao02 from "@/assets/botao02.png";
 import botao03 from "@/assets/botao03.png";
 import botao04 from "@/assets/botao04.png";
 import botao05 from "@/assets/botao05.png";
 import logo from "@/assets/logo.png";
-import fundo from "@/assets/fundo.png";
 
 const Index = () => {
   return (
     <div className="min-h-screen noise-bg relative">
-      {/* Background decorativo */}
-      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
-        <img 
-          src={fundo} 
-          alt="Background decorativo"
-          className="absolute left-0 top-0 h-full w-auto object-cover object-left opacity-40"
-        />
-      </div>
+      {/* Background animado */}
+      <EtherealShadow
+        color="rgba(220, 38, 38, 0.6)"
+        animation={{ scale: 50, speed: 20 }}
+        noise={{ opacity: 0.3, scale: 1.5 }}
+        sizing="fill"
+      />
 
       {/* Conteúdo principal */}
       <div className="relative z-10">
