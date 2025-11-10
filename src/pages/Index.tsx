@@ -15,19 +15,10 @@ const Index = () => {
     <div className="min-h-screen noise-bg relative">
       {/* Background animado */}
       <EtherealShadow
-        color="rgba(30, 30, 30, 0.95)"
-        animation={{ scale: 95, speed: 8 }}
-        noise={{ opacity: 0.8, scale: 0.8 }}
+        color="rgba(128, 128, 128, 1)"
+        animation={{ scale: 50, speed: 50 }}
+        noise={{ opacity: 0.5, scale: 1 }}
         sizing="fill"
-      />
-      
-      {/* Gradiente adicional para variação de cores */}
-      <div 
-        className="fixed inset-0 pointer-events-none z-[1] animate-pulse" 
-        style={{
-          background: 'radial-gradient(circle at 50% 50%, rgba(60, 60, 60, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%)',
-          animation: 'pulse 8s ease-in-out infinite'
-        }}
       />
 
       {/* Conteúdo principal */}

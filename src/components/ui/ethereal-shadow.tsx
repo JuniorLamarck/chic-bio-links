@@ -59,7 +59,7 @@ export function EtherealShadow({
   className
 }: ShadowOverlayProps) {
   const id = useInstanceId();
-  const animationEnabled = !!(animation && animation.scale > 0);
+  const animationEnabled = animation && animation.scale > 0;
   const feColorMatrixRef = useRef<SVGFEColorMatrixElement>(null);
   const hueRotateMotionValue = useMotionValue(180);
   const hueRotateAnimation = useRef<AnimationPlaybackControls | null>(null);
@@ -69,7 +69,9 @@ export function EtherealShadow({
 
   useEffect(() => {
     if (feColorMatrixRef.current && animationEnabled) {
-      if (hueRotateAnimation.current) hueRotateAnimation.current.stop();
+      if (hueRotateAnimation.current) {
+        hueRotateAnimation.current.stop();
+      }
       hueRotateMotionValue.set(0);
       hueRotateAnimation.current = animate(hueRotateMotionValue, 360, {
         duration: animationDuration / 25,
@@ -86,7 +88,9 @@ export function EtherealShadow({
       });
 
       return () => {
-        if (hueRotateAnimation.current) hueRotateAnimation.current.stop();
+        if (hueRotateAnimation.current) {
+          hueRotateAnimation.current.stop();
+        }
       };
     }
   }, [animationEnabled, animationDuration, hueRotateMotionValue]);
@@ -95,11 +99,11 @@ export function EtherealShadow({
     <div
       className={className}
       style={{
+        overflow: "hidden",
         position: "fixed",
         inset: 0,
         width: "100vw",
         height: "100vh",
-        overflow: "hidden",
         pointerEvents: "none",
         zIndex: 0,
         ...style
@@ -119,7 +123,7 @@ export function EtherealShadow({
                 <feTurbulence
                   result="undulation"
                   numOctaves="2"
-                  baseFrequency={`${mapRange(animation!.scale, 0, 100, 0.001, 0.0005)},${mapRange(animation!.scale, 0, 100, 0.004, 0.002)}`}
+                  baseFrequency={`${mapRange(animation.scale, 0, 100, 0.001, 0.0005)},${mapRange(animation.scale, 0, 100, 0.004, 0.002)}`}
                   seed="0"
                   type="turbulence"
                 />
@@ -155,13 +159,9 @@ export function EtherealShadow({
           style={{
             backgroundColor: color,
             maskImage: `url('https://framerusercontent.com/images/ceBGguIpUU8luwByxuQz79t7To.png')`,
-            WebkitMaskImage: `url('https://framerusercontent.com/images/ceBGguIpUU8luwByxuQz79t7To.png')`,
             maskSize: sizing === "stretch" ? "100% 100%" : "cover",
-            WebkitMaskSize: sizing === "stretch" ? "100% 100%" : "cover",
             maskRepeat: "no-repeat",
-            WebkitMaskRepeat: "no-repeat",
             maskPosition: "center",
-            WebkitMaskPosition: "center",
             width: "100%",
             height: "100%"
           }}
